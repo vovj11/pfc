@@ -11,7 +11,7 @@
   <a class="navbar-brand" href="#">
     <img src="#" width="30" height="30" alt="">
 		<div id="ct">
-			<a class="navbar-brand" href="#">CT</a>
+			<a class="navbar-brand" href="index.html">CT</a>
 		</div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -19,7 +19,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-3">
       <li class="nav-item active">
-        <a class="nav-link" href="curso.html">Curso <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Curso <span class="sr-only">(current)</span></a>
       </li>
 			<li class="nav-item active">
         <a class="nav-link" href="#">instituicao <span class="sr-only">(current)</span></a>
@@ -40,24 +40,54 @@
 
 		<section  id="analise">
 			<div class="container pb-5">
-				<!-- grid center                -->
-				<div class="row justify-content-center">
-					<!-- alterando o grid,margin e padding                   -->
-					<article class="card borda-cor-especial card-largura p-0 m-4 col-12 col-md-4" >
-						<img src="" class="card-img-top card-posicao-imagem" alt="">
-						<div class="card-body">
-							<h5 class="card-title">Relatório1</h5>
+				<!-- grid center-->
 
+				<ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Curso</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Area</a>
+						</li>
+				</ul>
+
+				<div class="tab-content" id="myTabContent">
+					<form class="fundo-formulario">
+						<div class="form-row">
+							<div class="form-group col-md-6 p-2">
+								<label for="inputNomeInstituicao">Nome</label>
+								<input type="text" class="form-control" id="inputNomeInstituicao" placeholder="Nome da instituição">
+							</div>
+
+							<div class="form-group col-md-6 p-2">
+								<label for="inputCidadeInstituicao">Cidade</label>
+								<input type="text" class="form-control" id="inputCidadeInstituicao" placeholder="Nome da cidade">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputEstadoInstituicao">UF</label>
+								<select id="inputEstadoInstituicao" class="form-control">
+									<option selected>Escolha...</option>
+									<option>...</option>
+								</select>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputEstadoInstituicao">UF</label>
+								<select id="inputEstadoInstituicao" class="form-control">
+									<option selected>Escolha...</option>
+									<option>...</option>
+								</select>
+							</div>
 						</div>
-					</article>
-					<!-- alterando o grid,margin e padding                     -->
-					<article class="card borda-cor-especial card-largura p-0 m-4 col-12 col-md-4">
-						<img src="" class="card-img-top card-posicao-imagem" alt="">
-						<div class="card-body">
-							<h5 class="card-title">Relatório2</h5>
+						<div class="align-self-end">
+							<button type="submit" class="btn btn-primary m-2">Pesquisar</button>
 						</div>
-					</article>
+
+					</form>
 				</div>
+
+
 			</div>
 		</section>
 
