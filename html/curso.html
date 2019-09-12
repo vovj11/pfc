@@ -1,57 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="src/reset.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="src/style.css">
 	<title>Course trend</title>
 </head>
 
 <header>
-	<nav class="navbar navbar-light bg-white navbar-expand-lg border">
-		<a class="navbar-brand" href="#">
-			<img src="src\imagens\icone.png" width="30" height="30" alt="">
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="curso.html">Curso <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">instituicao <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Relatório <span class="sr-only">(current)</span></a>
-				</li>
-			</ul>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="#" width="30" height="30" alt="">
+		<div id="ct">
+			<a class="navbar-brand" href="index.html">CT</a>
 		</div>
-	</nav>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-3">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Curso <span class="sr-only">(current)</span></a>
+      </li>
+			<li class="nav-item active">
+        <a class="nav-link" href="#">instituicao <span class="sr-only">(current)</span></a>
+      </li>
+			<li class="nav-item active">
+        <a class="nav-link" href="#">Relatório <span class="sr-only">(current)</span></a>
+      </li>
+  </a>
+</nav>
 </header>
 
 <body class="cor-background">
 
 	<main>
-		<div class="container mt-3  bg-white border">
-			<section  id="seção-formulario ">
 
 
-				<nav class="nav-tabs-do-formulario">
-					<ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+
+
+		<section  id="analise">
+			<div class="container pb-5">
+				<!-- grid center-->
+
+				<ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
 						<li class="nav-item">
 							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Curso</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Area</a>
-
 						</li>
-					</ul>
-				</nav>
-				
-				<div class="tab-content mb-4" id="myTabContent">
-					<form class="fundo-formulario border-right border-bottom border-left">
+				</ul>
+
+				<div class="tab-content" id="myTabContent">
+					<form class="fundo-formulario">
+						<div class="form-row">
+							<div class="form-group col-md-6 p-2">
+								<label for="inputNomeInstituicao">Nome</label>
+								<input type="text" class="form-control" id="inputNomeInstituicao" placeholder="Nome da instituição">
+							</div>
+
+							<div class="form-group col-md-6 p-2">
+								<label for="inputCidadeInstituicao">Cidade</label>
+								<input type="text" class="form-control" id="inputCidadeInstituicao" placeholder="Nome da cidade">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputEstadoInstituicao">UF</label>
+								<select id="inputEstadoInstituicao" class="form-control">
+									<option selected>Escolha...</option>
+									<option>...</option>
+								</select>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputEstadoInstituicao">UF</label>
+								<select id="inputEstadoInstituicao" class="form-control">
+									<option selected>Escolha...</option>
+									<option>...</option>
+								</select>
+							</div>
+						</div>
+						<div class="align-self-end">
+							<button type="submit" class="btn btn-primary m-2">Pesquisar</button>
+						</div>
+
+					</form>
+				</div>
+
+
+			</div>
+		</section>
+
+
+
+
+
+
+
+		</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="modal fade modal-instituicao-cadastro" tabindex="-1" role="dialog" aria-labelledby="modal-instituicao-cadastro" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content ">
+					<form>
 						<div class="form-row">
 							<div class="form-group col-md-6 p-3">
 								<label for="inputNomeInstituicao">Nome</label>
@@ -70,213 +137,103 @@
 									<option>...</option>
 								</select>
 							</div>
+						</div>
+
+						<button type="submit" class="btn btn-primary m-3">Salvar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade modal-curso-cadastro" tabindex="-1" role="dialog" aria-labelledby="modal-curso-cadastro" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content ">
+					<form>
+
+						<div class="form-row">
+							<div class="form-group col-md-6 p-3">
+								<label for="inputNomeCurso">Nome</label>
+								<input type="text" class="form-control" id="inputNomeCurso" placeholder="Nome do Curso">
+							</div>
 
 							<div class="form-group col-md-6 p-3">
-								<label for="inputEstadoInstituicao">UF</label>
-								<select id="inputEstadoInstituicao" class="form-control">
+								<label for="inputTurno">Turno</label>
+								<select id="inputTurno" class="form-control">
+									<option selected>Escolha...</option>
+									<option>...</option>
+								</select>
+							</div>
+
+							<div class="form-group col-md-6 p-3">
+								<label for="inputNumeroVagas">Número de vagas</label>
+								<input type="number" class="form-control" id="inputCidadeInstituicao" placeholder="Número de vagas">
+							</div>
+
+							<div class="form-group col-md-6 p-3">
+								<label for="inputCargaHorariaCurso">Carga horária</label>
+								<input type="number" class="form-control" id="inputCargaHorariaCurso" placeholder="Carga Horária do Curso">
+							</div>
+
+							<div class="form-group col-md-6 p-3">
+								<label for="inputCidadeCurso">Valor</label>
+								<input type="text" class="form-control" id="inputValorCurso" placeholder="Valor do curso">
+							</div>
+
+							<div class="form-group col-md-6 p-3">
+								<label for="inputModalidadeCuros">Modalidade</label>
+								<select id="inputModalidadeCurso" class="form-control">
 									<option selected>Escolha...</option>
 									<option>...</option>
 								</select>
 							</div>
 						</div>
-						
-						<button type="submit" class="btn btn-primary m-2 align-self-end">Pesquisar</button>
-						
+						<button type="submit" class="btn btn-primary m-3">Salvar</button>
 					</form>
 				</div>
-			</section>
+			</div>
+		</div>
 
-			<section id="tabela">
-				<table class="table">
-					<thead class="cor-especial">
-						<tr>
-							<th scope="col">#</th>
-							<th scope="col">Primeiro</th>
-							<th scope="col">Último</th>
-							<th scope="col">Nickname</th>
-							<th colspan="col">Ações</th>
+		<div class="modal fade modal-matriz-curricular-cadastro" tabindex="-1" role="dialog" aria-labelledby="modal-matriz-curricular-cadastro" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content ">
+					<form>
+						<div class="form-row">
 
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@mdo</td>
-							<td class=" border-0 ">
-								<button class="btn btn-info">Editar</button>
-								<button class="btn btn-danger">Excluir</button>
-							</td>
-							
-							
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-							<td class=" border-0">
-								<button class="btn btn-info">Editar</button>
-								<button class="btn btn-danger">Excluir</button>
-							</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td colspan="2">Larry the Bird</td>
-							<td>@twitter</td>
-							<td class=" border-0">
-								<button class="btn btn-info">Editar</button>
-								<button class="btn btn-danger">Excluir</button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<div class="d-flex justify-content-end">
-					<button type="submit" class="btn btn-primary m-2 ">Adicionar</button>	
+
+							<div class="form-group col-md-6 p-3">
+								<label for="inputPeriodoMatrizCurricular">Período</label>
+								<select id="inputPeriodoMatrizCurricular" class="form-control">
+									<option selected>Escolha...</option>
+									<option>...</option>
+								</select>
+							</div>
+
+							<div class="form-group col-md-6 p-3">
+								<label for="inputDisciplinaMatrizCurricular">Disciplina</label>
+								<input type="text" class="form-control" id="inputDisciplinaMatrizCurricular" placeholder="Nome da disciplina">
+							</div>
+
+							<div class="form-group col-md-6 p-3">
+								<label for="inputCargaHorariaMatrizCurricular">Carga horária</label>
+								<input type="number" class="form-control" id="inputCargaHorariaMatrizCurricular" placeholder="Carga horária da disciplina">
+
+							</div>
+
+						</div>
+						<button type="submit" class="btn btn-primary m-3">Salvar</button>
+						<button type="submit" class="btn btn-secondary ">Adicionar</button>
+					</form>
 				</div>
-
-			</section>
-
-			
-		</div>
-		
-	</main>
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<div class="modal fade modal-instituicao-cadastro" tabindex="-1" role="dialog" aria-labelledby="modal-instituicao-cadastro" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content ">
-				<form>
-					<div class="form-row">
-						<div class="form-group col-md-6 p-3">
-							<label for="inputNomeInstituicao">Nome</label>
-							<input type="text" class="form-control" id="inputNomeInstituicao" placeholder="Nome da instituição">
-						</div>
-
-						<div class="form-group col-md-6 p-3">
-							<label for="inputCidadeInstituicao">Cidade</label>
-							<input type="text" class="form-control" id="inputCidadeInstituicao" placeholder="Nome da cidade">
-						</div>
-
-						<div class="form-group col-md-6 p-3">
-							<label for="inputEstadoInstituicao">UF</label>
-							<select id="inputEstadoInstituicao" class="form-control">
-								<option selected>Escolha...</option>
-								<option>...</option>
-							</select>
-						</div>
-					</div>
-
-					<button type="submit" class="btn btn-primary m-3">Salvar</button>
-				</form>
 			</div>
 		</div>
-	</div>
-
-	<div class="modal fade modal-curso-cadastro" tabindex="-1" role="dialog" aria-labelledby="modal-curso-cadastro" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content ">
-				<form>
-
-					<div class="form-row">
-						<div class="form-group col-md-6 p-3">
-							<label for="inputNomeCurso">Nome</label>
-							<input type="text" class="form-control" id="inputNomeCurso" placeholder="Nome do Curso">
-						</div>
-
-						<div class="form-group col-md-6 p-3">
-							<label for="inputTurno">Turno</label>
-							<select id="inputTurno" class="form-control">
-								<option selected>Escolha...</option>
-								<option>...</option>
-							</select>
-						</div>
-
-						<div class="form-group col-md-6 p-3">
-							<label for="inputNumeroVagas">Número de vagas</label>
-							<input type="number" class="form-control" id="inputCidadeInstituicao" placeholder="Número de vagas">
-						</div>
-
-						<div class="form-group col-md-6 p-3">
-							<label for="inputCargaHorariaCurso">Carga horária</label>
-							<input type="number" class="form-control" id="inputCargaHorariaCurso" placeholder="Carga Horária do Curso">
-						</div>
-
-						<div class="form-group col-md-6 p-3">
-							<label for="inputCidadeCurso">Valor</label>
-							<input type="text" class="form-control" id="inputValorCurso" placeholder="Valor do curso">
-						</div>
-
-						<div class="form-group col-md-6 p-3">
-							<label for="inputModalidadeCuros">Modalidade</label>
-							<select id="inputModalidadeCurso" class="form-control">
-								<option selected>Escolha...</option>
-								<option>...</option>
-							</select>
-						</div>
-					</div>
-					<button type="submit" class="btn btn-primary m-3">Salvar</button>
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<div class="modal fade modal-matriz-curricular-cadastro" tabindex="-1" role="dialog" aria-labelledby="modal-matriz-curricular-cadastro" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content ">
-				<form>
-					<div class="form-row">
-
-
-						<div class="form-group col-md-6 p-3">
-							<label for="inputPeriodoMatrizCurricular">Período</label>
-							<select id="inputPeriodoMatrizCurricular" class="form-control">
-								<option selected>Escolha...</option>
-								<option>...</option>
-							</select>
-						</div>
-
-						<div class="form-group col-md-6 p-3">
-							<label for="inputDisciplinaMatrizCurricular">Disciplina</label>
-							<input type="text" class="form-control" id="inputDisciplinaMatrizCurricular" placeholder="Nome da disciplina">
-						</div>
-
-						<div class="form-group col-md-6 p-3">
-							<label for="inputCargaHorariaMatrizCurricular">Carga horária</label>
-							<input type="number" class="form-control" id="inputCargaHorariaMatrizCurricular" placeholder="Carga horária da disciplina">
-
-						</div>
-
-					</div>
-					<button type="submit" class="btn btn-primary m-3">Salvar</button>
-					<button type="submit" class="btn btn-secondary ">Adicionar</button>
-				</form>
-			</div>
-		</div>
-	</div>
 
 
 
+		<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-</html>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+	</html>
