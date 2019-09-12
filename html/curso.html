@@ -8,7 +8,6 @@
 </head>
 
 <header>
-
 	<nav class="navbar navbar-light bg-white navbar-expand-lg border">
 		<a class="navbar-brand" href="#">
 			<img src="src\imagens\icone.png" width="30" height="30" alt="">
@@ -35,40 +34,115 @@
 <body class="cor-background">
 
 	<main>
+		<div class="container mt-3  bg-white border">
+			<section  id="seção-formulario ">
 
-		<section  id="analise">
-			<div class="container pb-5">
-				<!-- grid center                -->
-				<div class="row justify-content-center">
-					<!-- alterando o grid,margin e padding                   -->
-					<article class="card borda-cor-especial card-largura p-0 m-4 col-12 col-md-4" >
-						<img src="" class="card-img-top card-posicao-imagem" alt="">
-						<div class="card-body">
-							<h5 class="card-title">Texto</h5>
-							<p class="card-text">Texto2</p>
-							<a href="#" class="btn ">Texto3</a>
+
+				<nav class="nav-tabs-do-formulario">
+					<ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Curso</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Area</a>
+
+						</li>
+					</ul>
+				</nav>
+				
+				<div class="tab-content mb-4" id="myTabContent">
+					<form class="fundo-formulario border-right border-bottom border-left">
+						<div class="form-row">
+							<div class="form-group col-md-6 p-3">
+								<label for="inputNomeInstituicao">Nome</label>
+								<input type="text" class="form-control" id="inputNomeInstituicao" placeholder="Nome da instituição">
+							</div>
+
+							<div class="form-group col-md-6 p-3">
+								<label for="inputCidadeInstituicao">Cidade</label>
+								<input type="text" class="form-control" id="inputCidadeInstituicao" placeholder="Nome da cidade">
+							</div>
+
+							<div class="form-group col-md-6 p-3">
+								<label for="inputEstadoInstituicao">UF</label>
+								<select id="inputEstadoInstituicao" class="form-control">
+									<option selected>Escolha...</option>
+									<option>...</option>
+								</select>
+							</div>
+
+							<div class="form-group col-md-6 p-3">
+								<label for="inputEstadoInstituicao">UF</label>
+								<select id="inputEstadoInstituicao" class="form-control">
+									<option selected>Escolha...</option>
+									<option>...</option>
+								</select>
+							</div>
 						</div>
-					</article>
-					<!-- alterando o grid,margin e padding                     -->
-					<article class="card borda-cor-especial card-largura p-0 m-4 col-12 col-md-4">
-						<img src="" class="card-img-top card-posicao-imagem" alt="">
-						<div class="card-body">
-							<h5 class="card-title">Texto</h5>
-							<p class="card-text">Texto2</p>
-							<a href="#" class="btn">Texto3</a>
-						</div>
-					</article>
-				</div>   
-			</div>
-		</section> 
+						
+						<button type="submit" class="btn btn-primary m-2 align-self-end">Pesquisar</button>
+						
+					</form>
+				</div>
+			</section>
 
+			<section id="tabela">
+				<table class="table">
+					<thead class="cor-especial">
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Primeiro</th>
+							<th scope="col">Último</th>
+							<th scope="col">Nickname</th>
+							<th colspan="col">Ações</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>Mark</td>
+							<td>Otto</td>
+							<td>@mdo</td>
+							<td class=" border-0 ">
+								<button class="btn btn-info">Editar</button>
+								<button class="btn btn-danger">Excluir</button>
+							</td>
+							
+							
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Jacob</td>
+							<td>Thornton</td>
+							<td>@fat</td>
+							<td class=" border-0">
+								<button class="btn btn-info">Editar</button>
+								<button class="btn btn-danger">Excluir</button>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td colspan="2">Larry the Bird</td>
+							<td>@twitter</td>
+							<td class=" border-0">
+								<button class="btn btn-info">Editar</button>
+								<button class="btn btn-danger">Excluir</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="d-flex justify-content-end">
+					<button type="submit" class="btn btn-primary m-2 ">Adicionar</button>	
+				</div>
+
+			</section>
+
+			
+		</div>
 		
-
-		
-
-
-
 	</main>
+	
 
 
 
@@ -197,7 +271,6 @@
 			</div>
 		</div>
 	</div>
-
 
 
 
